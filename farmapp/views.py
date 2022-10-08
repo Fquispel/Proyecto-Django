@@ -22,11 +22,11 @@ class CategoriaViewSet(viewsets.ModelViewSet):
     serializer_class = CategoriaSerializer
 
 class PacienteViewSet(viewsets.ModelViewSet):
-    queryset = Pacientes.objects.all()
+    queryset = Paciente.objects.all()
     serializer_class = PacienteSerializer
 
 class MedicamentosViewSet(viewsets.ModelViewSet):
-    queryset = Medicamentos.objects.all()
+    queryset = Medicamento.objects.all()
     serializer_class = MedicamentosSerializer
 
 class MedicoEspecialistaViewSet(viewsets.ModelViewSet):
@@ -38,7 +38,7 @@ class AgendarCitaViewSet(viewsets.ModelViewSet):
     serializer_class = agendarCitaSerializer
 
 class MedicamentosCreateAndList(generics.CreateAPIView,generics.ListAPIView):
-    queryset = Medicamentos.objects.all()
+    queryset = Medicamento.objects.all()
     serializer_class = MedicamentosSerializer
 
 class PacienteCreateAndList(generics.CreateAPIView,generics.ListAPIView):
